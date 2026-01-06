@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frederik Askholt - Portfolio</title>
+    <meta
+      name="description"
+      content="Frederik Askholt's professional portfolio showcasing web development projects including MMD, InkFinder, AI-Uprising, and Me&We."
+    />
+
+    <link rel="preload" href="css/main.css" as="style" />
+    <link rel="preload" href="js/main.js" as="script" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <div>
+          <a href="#home" class="nav__logo">Frederik Askholt</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#home" class="nav__link active">Hjem</a>
+            </li>
+            <li>
+              <a href="#about" class="nav__link">Om Mig</a>
+            </li>
+            <li>
+              <a href="#projects" class="nav__link">Projekter</a>
+            </li>
+            <li>
+              <a href="#skills" class="nav__link">Færdigheder</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav__link">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav__toggle-icon"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero section" id="home">
+        <div class="hero__container container">
+          <div>
+            <h1 class="hero__title">
+              <span class="hero__greeting">Hej, mit navn er</span>
+              <span class="hero__name">Frederik Askholt</span>
+              <span class="hero__role">Multimediedesign-studerende på EK</span>
+            </h1>
+
+            <p class="hero__description">
+              Jeg brænder for at lære og skabe inden for multimediedesign, da
+              feltet er i konstant udvikling. Her kan du udforske min rejse
+              gennem webudviklings-projekter fra mit første semester
+            </p>
+
+            <div class="hero__buttons">
+              <a href="#projects" class="btn btn--primary">Se mine projekter</a>
+              <a href="#contact" class="btn btn--secondary">Kontakt mig</a>
+            </div>
+          </div>
+
+          <div class="hero__image">
+            <div class="hero__image-bg"></div>
+            <img
+              src="assets/images/profile-placeholder.jpg"
+              alt="Frederik Askholt"
+              class="hero__img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title">Om Mig</h2>
+            <p class="section__subtitle">Min rejse inden for webudvikling</p>
+          </div>
+
+          <div class="about__container">
+            <div>
+              <p class="about__text">
+                Jeg er en passioneret webudvikler, der i øjeblikket studerer
+                multimediedesign. Gennem mit første semester har jeg arbejdet på
+                forskellige projekter, som viser mine voksende færdigheder inden
+                for HTML, CSS og JavaScript.
+              </p>
+
+              <p class="about__text">
+                Fra at skabe en computer-showcase-hjemmeside til at udvikle
+                interaktive applikationer som en tattoo-finder-service har hvert
+                projekt været en læringsoplevelse, der har formet min forståelse
+                af brugeroplevelse, design og grundlæggende webudvikling.
+              </p>
+
+              <div class="about__stats">
+                <div class="stat">
+                  <span class="stat__number">4</span>
+                  <span class="stat__label">Gennemførte projekter</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__number">1</span>
+                  <span class="stat__label">Semester</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__number">100%</span>
+                  <span class="stat__label">Passion</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects section" id="projects">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title">Mine projekter</h2>
+            <p class="section__subtitle">
+              En fremvisning af mit semesterarbejde
+            </p>
+          </div>
+
+          <div class="projects__container">
+            <!-- MMD Project -->
+            <article
+              class="project"
+              onclick="showProjectImages('mmd')"
+              style="cursor: pointer"
+            >
+              <div class="project__image">
+                <img
+                  src="assets/images/mmd/mmd-preview.jpg"
+                  alt="MMD Computer Showcase"
+                  class="project__img"
+                />
+              </div>
+
+              <div class="project__content">
+                <h3 class="project__title">MMD - Computerpræsentation</h3>
+                <p class="project__description">
+                  En omfattende hjemmeside, der viser computerspecifikationer og
+                  viser evnen til at følge et layout, der er givet af
+                  underviseren.
+                </p>
+                <div class="project__tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- InkFinder Project -->
+            <article class="project" onclick="showProjectImages('inkfinder')">
+              <div class="project__image">
+                <img
+                  src="assets/images/inkfinder/inkfinder-preview.jpg"
+                  alt="InkFinder Tattoo Service"
+                  class="project__img"
+                />
+              </div>
+
+              <div class="project__content">
+                <h3 class="project__title">InkFinder - Tattoo-Service</h3>
+                <p class="project__description">
+                  En interaktiv webapplikation til at finde tatovører og
+                  stilarter. Indeholder avanceret filtrering og søgning baseret
+                  på placering.
+                </p>
+                <div class="project__tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- AI-Uprising Project -->
+            <article class="project" onclick="showProjectImages('ai-uprising')">
+              <div class="project__image">
+                <img
+                  src="assets/images/ai-uprising/ai-uprising-preview.jpg"
+                  alt="AI-Uprising Website"
+                  class="project__img"
+                />
+              </div>
+
+              <div class="project__content">
+                <h3 class="project__title">AI-oprør</h3>
+                <p class="project__description">
+                  En dramatisk AI-tema hjemmeside med medrivende design og
+                  interaktive elementer. Indeholder dynamisk indhold og
+                  engagerende brugeroplevelse.
+                </p>
+                <div class="project__tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">SVG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Me&We Project -->
+            <article class="project" onclick="showProjectImages('mewe')">
+              <div class="project__image">
+                <img
+                  src="assets/images/mewe/mewe-preview.jpg"
+                  alt="Me&We Restaurant Website"
+                  class="project__img"
+                />
+              </div>
+
+              <div class="project__content">
+                <h3 class="project__title">Me&We - Restaurant Site</h3>
+                <p class="project__description">
+                  En moderne restaurant-hjemmeside med elegant design,
+                  menupræsentation og lokationsfunktioner. Optimeret til mobile
+                  spiseoplevelser
+                </p>
+                <div class="project__tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills section" id="skills">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title">Færdigheder & teknologier</h2>
+            <p class="section__subtitle">Hvad jeg har lært dette semester</p>
+          </div>
+
+          <div class="skills__container">
+            <div class="skills__category">
+              <h3 class="skills__category-title">Frontend-udvikling</h3>
+              <div class="skills__list">
+                <div class="skill">
+                  <div class="skill__info">
+                    <span class="skill__name">HTML</span>
+                    <span class="skill__percent">80%</span>
+                  </div>
+                  <div class="skill__bar">
+                    <div class="skill__fill" style="width: 80%"></div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <div class="skill__info">
+                    <span class="skill__name">CSS</span>
+                    <span class="skill__percent">70%</span>
+                  </div>
+                  <div class="skill__bar">
+                    <div class="skill__fill" style="width: 70%"></div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <div class="skill__info">
+                    <span class="skill__name">JavaScript</span>
+                    <span class="skill__percent">55%</span>
+                  </div>
+                  <div class="skill__bar">
+                    <div class="skill__fill" style="width: 55%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__category">
+              <h3 class="skills__category-title">Design</h3>
+              <div class="skills__list">
+                <div class="skill">
+                  <div class="skill__info">
+                    <span class="skill__name">Responsive Design</span>
+                    <span class="skill__percent">75%</span>
+                  </div>
+                  <div class="skill__bar">
+                    <div class="skill__fill" style="width: 75%"></div>
+                  </div>
+                </div>
+
+                <div class="skill">
+                  <div class="skill__info">
+                    <span class="skill__name">UI/UX Principles</span>
+                    <span class="skill__percent">70%</span>
+                  </div>
+                  <div class="skill__bar">
+                    <div class="skill__fill" style="width: 70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title">
+              Kom i kontakt - samt links til et nærmere indblik i min proces og
+              mit arbejde
+            </h2>
+            <p class="section__subtitle">
+              Lad os komme i kontakt og diskutere muligheder
+            </p>
+          </div>
+
+          <div class="contact__container">
+            <div class="contact__info">
+              <div class="contact__item">
+                <div class="contact__icon">📧</div>
+                <div>
+                  <h3 class="contact__title">Email</h3>
+                  <p class="contact__text">Frederik.askholt@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact__item">
+                <div class="contact__icon">📱</div>
+                <div>
+                  <h3 class="contact__title">Telefon</h3>
+                  <p class="contact__text">+45 53 60 75 14</p>
+                </div>
+              </div>
+
+              <div class="contact__item">
+                <div class="contact__icon">📍</div>
+                <div>
+                  <h3 class="contact__title">Lokation</h3>
+                  <p class="contact__text">København</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__links">
+              <h3 class="contact__links-title">
+                Links til designprocesser og prototyper
+              </h3>
+
+              <div class="contact__link-item">
+                <h4 class="contact__link-title">Ai-oprør figma:</h4>
+                <a
+                  href="https://www.figma.com/design/x5pB67XfzHigUMVgBWGp52/Emergency-site--AI-uprising-?node-id=15-57&t=hFYKu3TUZKMJ5z2j-1"
+                  target="_blank"
+                  class="contact__link"
+                  >Se Figma design</a
+                >
+              </div>
+
+              <div class="contact__link-item">
+                <h4 class="contact__link-title">
+                  Inkfinder desktop prototype:
+                </h4>
+                <a
+                  href="https://www.figma.com/proto/FFMG6VkxRqaqD4iFRi8wS9/figma-tattoo_Web?node-id=13-45&starting-point-node-id=13%3A45&t=96wJhQeWG5ro5N5Z-1"
+                  target="_blank"
+                  class="contact__link"
+                  >Se desktop prototype</a
+                >
+              </div>
+
+              <div class="contact__link-item">
+                <h4 class="contact__link-title">Inkfinder mobil prototype:</h4>
+                <a
+                  href="https://www.figma.com/proto/FFMG6VkxRqaqD4iFRi8wS9/figma-tattoo_Web?node-id=112-53&t=licuJnOn4VKoYG06-1"
+                  target="_blank"
+                  class="contact__link"
+                  >Se mobil prototype</a
+                >
+              </div>
+
+              <div class="contact__link-item">
+                <h4 class="contact__link-title">Inkfinder Figma:</h4>
+                <a
+                  href="https://www.figma.com/design/FFMG6VkxRqaqD4iFRi8wS9/figma-tattoo_Web?node-id=9-142&t=hFYKu3TUZKMJ5z2j-1"
+                  target="_blank"
+                  class="contact__link"
+                  >Se Figma design</a
+                >
+              </div>
+
+              <div class="contact__link-item">
+                <h4 class="contact__link-title">Me&we Presentation:</h4>
+                <a
+                  href="https://www.figma.com/slides/qpHWYVwyGQnhY9ZHi7L1WG/Freml%C3%A6ggelse?node-id=9-3&t=em9iofkGB1IQgzwK-1"
+                  target="_blank"
+                  class="contact__link"
+                  >Se presentation</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__section">
+            <h3 class="footer__title">Frederik Askholt</h3>
+            <p class="footer__text">
+              Passioneret webudvikler, der prøver at skabe moderne og responsive
+              oplevelser.
+            </p>
+          </div>
+
+          <div class="footer__section">
+            <h4 class="footer__subtitle">Hurtige Links</h4>
+            <ul class="footer__links">
+              <li><a href="#about" class="footer__link">Om</a></li>
+              <li><a href="#projects" class="footer__link">Projekter</a></li>
+              <li><a href="#skills" class="footer__link">Færdigheder</a></li>
+              <li><a href="#contact" class="footer__link">Kontakt</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+         2026 Frederik Askholt - Multimediedesign EK
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="image-gallery" class="image-gallery" onclick="closeGallery()">
+      <div class="gallery-content" onclick="event.stopPropagation()">
+        <span class="gallery-close" onclick="closeGallery()">&times;</span>
+        <h3 id="gallery-title">Project Images</h3>
+        <div class="gallery-images" id="gallery-images"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/project.js"></script>
+  </body>
+</html>
